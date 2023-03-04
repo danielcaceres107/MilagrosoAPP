@@ -28,11 +28,10 @@
             android:id="@+id/User"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
             android:ems="10"
+            android:hint="@string/Usuario"
             android:inputType="text"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,11 +49,11 @@
             android:id="@+id/clave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Clave"
             android:ems="10"
+            android:hint="@string/Clave"
             android:inputType="textPassword"
             android:textSize="20sp"
-            />
+            android:contentDescription="Enter Password"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btn_ingresar"

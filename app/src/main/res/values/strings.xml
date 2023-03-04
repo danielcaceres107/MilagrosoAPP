@@ -13,6 +13,8 @@
     <string name="sandwich">Sandwiches</string>
     <string name="tacos">Tacos</string>
     <string name="menu">¿Qué quieres comer?</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Clave">Clave</string>
     <string-array name="tipo_vendedor">
         <item>Vendedor</item>
         <item>Comprador</item>
