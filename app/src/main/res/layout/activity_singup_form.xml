@@ -77,16 +77,23 @@
         android:textColorHint="@color/colorAccent"
         app:passwordToggleEnabled="true"
         >
+
         <EditText
             android:id="@+id/clave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Clave"
+            android:layout_marginBottom="10dp"
             android:ems="10"
+            android:hint="@string/Clave"
             android:inputType="textPassword"
-            android:textSize="10sp"
-            />
+        />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner_tipo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:id="@+id/button_registrar"

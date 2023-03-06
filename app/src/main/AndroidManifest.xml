@@ -12,9 +12,6 @@
         android:theme="@style/Theme.MilagrosoApp"
         tools:targetApi="31">
         <activity
-            android:name=".Inicio"
-            android:exported="false" />
-        <activity
             android:name=".Mostrar"
             android:exported="false" />
         <activity

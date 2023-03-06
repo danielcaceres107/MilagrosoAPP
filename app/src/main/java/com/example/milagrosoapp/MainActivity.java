@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (dao.login(u,p)==1) {
             Usuario ux=dao.getUsuario(u,p);
             Toast.makeText(this, " LOGIN EXITOSO",Toast.LENGTH_LONG).show();
-            Intent i = new Intent(MainActivity.this,Inicio.class);
+            Intent i = new Intent(MainActivity.this,RegistrarSignos.class);
             i.putExtra("id", ux.getId());
             startActivity(i);
         }else{

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegistrarSignos extends AppCompatActivity {
-    EditText glucosa, hipertension, incardiaca;
+    EditText glucosa, hipertension, incardiaca, temperatura, sintomas, actividadFisica, medicamentos;
     Button registrarSignos;
     daoUsuario dao;
 
