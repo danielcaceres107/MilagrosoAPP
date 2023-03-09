@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/colorAccent"
+        android:textColorHint="@color/white"
         >
 
         <EditText
@@ -25,7 +25,7 @@
             android:hint="Ingrese nombre"
             android:ems="10"
             android:inputType="text"
-            android:textSize="10sp"
+            android:textSize="12sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/colorAccent"
+        android:textColorHint="@color/white"
         >
 
         <EditText
@@ -44,7 +44,7 @@
             android:hint="Ingrese apellido"
             android:ems="10"
             android:inputType="text"
-            android:textSize="10sp"
+            android:textSize="12sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/colorAccent"
+        android:textColorHint="@color/white"
         >
         <EditText
             android:id="@+id/correo"
@@ -64,7 +64,7 @@
             android:hint="Correo"
             android:ems="10"
             android:inputType="text"
-            android:textSize="10sp"
+            android:textSize="12sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/colorAccent"
+        android:textColorHint="@color/white"
         app:passwordToggleEnabled="true"
         >
 
@@ -85,6 +85,7 @@
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="@string/Clave"
+            android:textSize="12sp"
             android:inputType="textPassword"
         />
     </com.google.android.material.textfield.TextInputLayout>
@@ -92,6 +93,8 @@
     <Spinner
         android:id="@+id/spinner_tipo"
         android:layout_width="match_parent"
+        android:hint="Escoger tipo de paciente"
+        android:textColor="#777373"
         android:layout_height="48dp"
         android:layout_marginBottom="20dp" />
 

@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 
 public class daoUsuario {
@@ -15,7 +17,7 @@ public class daoUsuario {
     String db="DBUsuarios";
     String tabla="create table if not exists usuario(id integer primary key autoincrement, usuario text, pass text, nombre text, ap text)";
 
-    public daoUsuario(Context context){
+    public daoUsuario(@NonNull Context context){
         this.context=context;
         sql=context.openOrCreateDatabase(db, context.MODE_PRIVATE,null);
         sql.execSQL(tabla);

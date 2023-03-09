@@ -2,6 +2,7 @@
     <string name="app_name">MilagrosoApp</string>
     <string name="Usuario">Usuario</string>
     <string name="Clave">Clave</string>
+    <string name="Ingresar_glucosa">Ingrese nivel de glucosa en la sangre</string>
     <string-array name="tipo">
         <item>Hipertension</item>
         <item>Diabetes</item>
