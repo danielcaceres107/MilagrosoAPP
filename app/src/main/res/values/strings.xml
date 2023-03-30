@@ -8,4 +8,5 @@
         <item>Diabetes</item>
         <item>Insuficiencia cardiaca</item>
     </string-array>
+    <string name="title_activity_ubicacion">Ubicacion</string>
 </resources>

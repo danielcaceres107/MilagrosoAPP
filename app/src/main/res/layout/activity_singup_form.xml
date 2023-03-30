@@ -7,10 +7,10 @@
     android:background="@color/design_default_color_background"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".Registrar"
+    tools:context=".RegistrarSignos"
     tools:ignore="ExtraText">
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nombre1"
+        android:id="@+id/fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -19,7 +19,7 @@
         >
 
         <EditText
-            android:id="@+id/nombre2"
+            android:id="@+id/fullname2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingrese nombre"
@@ -29,7 +29,7 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/apellido1"
+        android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -38,7 +38,7 @@
         >
 
         <EditText
-            android:id="@+id/apellido2"
+            android:id="@+id/userName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingrese apellido"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         >
         <EditText
             android:id="@+id/correo"
@@ -67,6 +67,85 @@
             android:textSize="12sp"
             />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/black"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese su Direccion"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="10sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/anoNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/black"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese su año de nacimiento"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="10sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup_genero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo: "
+            android:textSize="10sp"
+            />
+        <RadioButton
+            android:id="@+id/radioButton_hombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Hombre"
+            android:textSize="10sp"
+
+            />
+        <RadioButton
+            android:id="@+id/radioButton_mujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Mujer"
+            android:textSize="10sp"
+            />
+        <RadioButton
+            android:id="@+id/radioButton_otro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Otro"
+            android:textSize="10sp"
+            />
+
+    </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editText_password"
@@ -91,12 +170,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spinner_tipo"
+        android:id="@+id/tipo"
         android:layout_width="match_parent"
         android:hint="Escoger tipo de paciente"
         android:textColor="#777373"
         android:layout_height="48dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:entries="@array/tipo"/>
 
     <Button
         android:id="@+id/button_registrar"
@@ -121,6 +201,17 @@
         android:textColor="#FFFFFF"
         android:layout_marginTop="10dp"
         android:onClick="btn_cancelar"
+        />
+
+    <Button
+        android:id="@+id/button_mostrar_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:text="Mostrar registro"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
         />
 
 </LinearLayout>
