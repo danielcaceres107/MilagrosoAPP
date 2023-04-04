@@ -3,6 +3,7 @@ package com.example.milagrosoapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.icu.text.UnicodeSetIterator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,13 +27,17 @@ public class RegistrarSignos extends AppCompatActivity {
     }
 
     public void button_registrar_signos(View view) {
+        startActivity(new Intent(this, Ubicacion.class));
+
+        /*
         Signos signos = new Signos();
         signos.setGlucosa(glucosa.getText().toString());
         signos.setHipertension(hipertension.getText().toString());
         signos.setIncardiaca(incardiaca.getText().toString());
         if (!signos.isNull()) {
             Toast.makeText(this, "ERROR: CAMPOS VACIOS", Toast.LENGTH_LONG).show();
-        }
+        }else {*/
+
 
     }
 }
