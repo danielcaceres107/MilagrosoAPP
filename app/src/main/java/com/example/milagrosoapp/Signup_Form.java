@@ -24,7 +24,6 @@ public class Signup_Form extends AppCompatActivity{
     private DatabaseHelper myDb;
     private TextInputLayout editFullName,editUserName, editEmail, editPassword, editLatitud, editLongitud, editDireccion, editAnoNacimiento;
     private Spinner editTipoUsuario;
-
     private Button btnAddData;
     private Button btnViewAll;
     private int tipo;
@@ -37,14 +36,15 @@ public class Signup_Form extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singup_form);
         getSupportActionBar().setTitle("Formulario Registro");
-        myDb=new DatabaseHelper(this);
+        myDb = new DatabaseHelper(this);
         editFullName=(TextInputLayout)findViewById(R.id.fullname);
         editUserName=(TextInputLayout)findViewById(R.id.userName);
         editEmail=(TextInputLayout)findViewById(R.id.editText_email);
         editPassword=(TextInputLayout)findViewById(R.id.editText_password);
-        editTipoUsuario=(Spinner) findViewById(R.id.tipo);
+        editEmail=(TextInputLayout)findViewById(R.id.editText_email);
         editDireccion=(TextInputLayout)findViewById(R.id.txtDireccion);
         editAnoNacimiento=(TextInputLayout) findViewById(R.id.anoNacimiento);
+        editTipoUsuario=(Spinner) findViewById(R.id.tipo);
         btnAddData=(Button)findViewById(R.id.button_registrar);
         btnViewAll=(Button)findViewById(R.id.button_mostrar_registro);
         addData();
@@ -68,7 +68,7 @@ public class Signup_Form extends AppCompatActivity{
                         user.setGenero(genero);
                         boolean isInserted=myDb.insertData(user);
                         if(isInserted)
-                            Toast.makeText(Signup_Form.this,  "Informacion registrada", Toast.LENGTH_LONG).show();
+                            Toast.makeText( Signup_Form.this,  "Informacion registrada", Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(Signup_Form.this,  "Informacion no registrada", Toast.LENGTH_LONG).show();
                     }
@@ -96,6 +96,14 @@ public class Signup_Form extends AppCompatActivity{
                             buffer.append(": "+res.getString( 6)+"\n");
                             buffer.append(": "+res.getString( 7)+"\n");
                             buffer.append(": "+res.getString( 8)+"\n");
+                            buffer.append(": "+res.getString( 9)+"\n");
+                            buffer.append(": "+res.getString( 10)+"\n");
+                            buffer.append(": "+res.getString( 11)+"\n");
+                            buffer.append(": "+res.getString( 12)+"\n");
+                            buffer.append(": "+res.getString( 13)+"\n");
+                            buffer.append(": "+res.getString( 14)+"\n");
+                            buffer.append(": "+res.getString( 15)+"\n");
+
 
 
 

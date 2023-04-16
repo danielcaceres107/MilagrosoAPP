@@ -1,7 +1,6 @@
 package com.example.milagrosoapp;
 
 public class User {
-
     private String fullName;
     private String userName;
     private String email;
@@ -10,14 +9,17 @@ public class User {
     private String direccion;
     private int ano_nacimiento;
     private String genero;
+    private String glucosa;
+    private String presion;
+    private String frecuencia;
     private String temperatura;
     private String sintomas;
-    private String actividadFisica;
+    private String actividad;
     private String medicamentos;
 
 
 
-    public User(String fullName, String userName, String email, String clave, String tipoPaciente, String direccion, String genero, int ano_nacimiento, String temperatura, String sintomas, String actividadFisica,String medicamentos) {
+    public User(String fullName, String userName, String email, String clave, String tipoPaciente, String direccion, String genero, int ano_nacimiento, String glucosa, String presion, String frecuencia, String temperatura, String sintomas,String actividad,String medicamentos) {
         fullName=new String();
         userName=new String();
         email=new String();
@@ -26,10 +28,13 @@ public class User {
         direccion=new String();
         ano_nacimiento=new Integer(0);
         genero=new String();
-        temperatura=new String();
-        sintomas=new String();
-        actividadFisica=new String();
-        medicamentos=new String();
+        glucosa =new String();
+        presion =new String();
+        frecuencia =new String();
+        temperatura =new String();
+        sintomas = new String();
+        actividad = new String();
+        medicamentos = new String();
 
     }
     public User() {
@@ -62,6 +67,19 @@ public class User {
         ano_nacimiento = tipo1;
     }
     public void setGenero(String genero1) {genero = genero1;}
+    public void setGlucosa(String glucosa1) {glucosa = glucosa1;}
+    public void setPresion(String presion1) {
+        presion = presion1;
+    }
+    public void setFrecuencia(String frecuencia1) {frecuencia = frecuencia1;}
+    public void setTemperatura(String temperatura1) {
+        temperatura = temperatura1;
+    }
+    public void setSintomas(String sintomas1) {sintomas = sintomas1;}
+    public void setActividad(String actividad1) {actividad = actividad1;}
+    public void setMedicamentos(String medicamentos1) {medicamentos = medicamentos1;}
+
+
     public String getFullname() {
         return this.fullName;
     }
@@ -84,36 +102,19 @@ public class User {
         return this.ano_nacimiento;
     }
     public String getGenero() {return this.genero;}
-
-    public String getTemperatura() {
-        return temperatura;
+    public String getGlucosa() {
+        return this.glucosa;
     }
-
-    public void setTemperatura(String temperatura) {
-        this.temperatura = temperatura;
+    public String getPresion() {
+        return this.presion;
     }
-
-    public String getSintomas() {
-        return sintomas;
+    public String getFrecuencia() {
+        return this.frecuencia;
     }
+    public String getTemperatura() {return this.temperatura;}
+    public String getSintomas() {return this.sintomas;}
+    public String getActividad() {return this.actividad;}
+    public String getMedicamentos() {return this.medicamentos;}
 
-    public void setSintomas(String sintomas) {
-        this.sintomas = sintomas;
-    }
 
-    public String getActividadFisica() {
-        return actividadFisica;
-    }
-
-    public void setActividadFisica(String actividadFisica) {
-        this.actividadFisica = actividadFisica;
-    }
-
-    public String getMedicamentos() {
-        return medicamentos;
-    }
-
-    public void setMedicamentos(String medicamentos) {
-        this.medicamentos = medicamentos;
-    }
 }

@@ -72,9 +72,9 @@ public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
         mMap.setMyLocationEnabled(true);
 
         // Add a marker
-        /*
+
         LatLng colombia = new LatLng(4.7009744, -74.1708576);
         mMap.addMarker(new MarkerOptions().position(colombia).title("Ubicación actual"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(colombia));*/
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(colombia));
     }
 }
