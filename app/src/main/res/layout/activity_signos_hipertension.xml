@@ -21,99 +21,28 @@
             app:srcCompat="@drawable/alas" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/incardiaca1"
+        android:id="@+id/hipertension1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="10px"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:textColorHint="@color/black"
         >
 
         <EditText
-            android:id="@+id/incardiaca2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="Ingrese frecuencia cardiaca"
-            android:textSize="12sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/temperatura1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
-        >
-        <EditText
-            android:id="@+id/temperatura2"
+            android:id="@+id/hipertension2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="Ingrese temperatura corporal"
-            android:ems="10"
+            android:hint="Ingrese presion arterial"
             android:inputType="text"
-            android:textSize="12sp"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sintomas1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
-        >
-        <EditText
-            android:id="@+id/sintomas2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese sintomas"
-            android:ems="10"
-            android:inputType="text"
-            android:textSize="12sp"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/actividad_fisica1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
-        >
-        <EditText
-            android:id="@+id/actividad_fisica2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10px"
-            android:hint="Ingrese actividad fisica"
-            android:ems="10"
-            android:inputType="text"
-            android:textSize="12sp"
-            />
+            android:selectAllOnFocus="false"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

@@ -1,6 +1,5 @@
 package com.example.milagrosoapp;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -49,13 +48,27 @@ public class Login_form extends AppCompatActivity {
                     int id = cursor.getInt(0);
                     String usuario2 = cursor.getString(2);
                     String clave1 = cursor.getString(4);
-
+                    String tipo = cursor.getString(5);
                     if (usuario1.equals(usuario2)&&clave1.equals(clave)) {
-                        Intent intent = new Intent(Login_form.this, RegistrarSignos.class);
-                        intent.putExtra("idUser", id);
-                        startActivity(intent);
-                        validación=validación++;
-                        break;
+                        if(tipo.equals("Diabetes")){
+                            Intent intent = new Intent(Login_form.this, signosDiabetes.class);
+                            intent.putExtra("idUser", id);
+                            startActivity(intent);
+                            validación = validación++;
+                            break;
+                        } else if (tipo.equals("Hipertension")) {
+                            Intent intent = new Intent(Login_form.this, signosHipertension.class);
+                            intent.putExtra("idUser", id);
+                            startActivity(intent);
+                            validación = validación++;
+                            break;
+                        } else {
+                            Intent intent = new Intent(Login_form.this, signosInsuficiencia.class);
+                            intent.putExtra("idUser", id);
+                            startActivity(intent);
+                            validación = validación++;
+                            break;
+                        }
                     }
 
                 }

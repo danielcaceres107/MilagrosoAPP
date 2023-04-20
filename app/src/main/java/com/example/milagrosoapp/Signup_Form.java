@@ -88,21 +88,21 @@ public class Signup_Form extends AppCompatActivity{
                         StringBuffer buffer=new StringBuffer();
                         while(res.moveToNext()){
                             buffer.append("Id: "+res.getString(0)+"\n");
-                            buffer.append(": "+res.getString( 1)+"\n");
-                            buffer.append(": "+res.getString( 2)+"\n");
-                            buffer.append(": "+res.getString( 3)+"\n");
-                            buffer.append(": "+res.getString( 4)+"\n");
-                            buffer.append(": "+res.getString( 5)+"\n");
-                            buffer.append(": "+res.getString( 6)+"\n");
-                            buffer.append(": "+res.getString( 7)+"\n");
-                            buffer.append(": "+res.getString( 8)+"\n");
-                            buffer.append(": "+res.getString( 9)+"\n");
-                            buffer.append(": "+res.getString( 10)+"\n");
-                            buffer.append(": "+res.getString( 11)+"\n");
-                            buffer.append(": "+res.getString( 12)+"\n");
-                            buffer.append(": "+res.getString( 13)+"\n");
-                            buffer.append(": "+res.getString( 14)+"\n");
-                            buffer.append(": "+res.getString( 15)+"\n");
+                            buffer.append("Nombre: "+res.getString( 1)+"\n");
+                            buffer.append("Usuario: "+res.getString( 2)+"\n");
+                            buffer.append("Correo: "+res.getString( 3)+"\n");
+                            buffer.append("Clave: "+res.getString( 4)+"\n");
+                            buffer.append("Tipo de usuario: "+res.getString( 5)+"\n");
+                            buffer.append("Dirección: "+res.getString( 6)+"\n");
+                            buffer.append("Año de nacimiento: "+res.getString( 7)+"\n");
+                            buffer.append("Genero: "+res.getString( 8)+"\n");
+                            buffer.append("Glucosa: "+res.getString( 9)+"\n");
+                            buffer.append("Presión: "+res.getString( 10)+"\n");
+                            buffer.append("Frecuencia: "+res.getString( 11)+"\n");
+                            buffer.append("Temperatura: "+res.getString( 12)+"\n");
+                            buffer.append("Sintomas: "+res.getString( 13)+"\n");
+                            buffer.append("Actividad: "+res.getString( 14)+"\n");
+                            buffer.append("Medicamentos: "+res.getString( 15)+"\n");
 
 
 

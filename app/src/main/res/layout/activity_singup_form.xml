@@ -7,7 +7,7 @@
     android:background="@color/design_default_color_background"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".RegistrarSignos"
+    tools:context=".signosInsuficiencia"
     tools:ignore="ExtraText">
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fullname"
