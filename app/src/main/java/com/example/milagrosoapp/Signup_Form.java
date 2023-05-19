@@ -103,10 +103,6 @@ public class Signup_Form extends AppCompatActivity{
                             buffer.append("Sintomas: "+res.getString( 13)+"\n");
                             buffer.append("Actividad: "+res.getString( 14)+"\n");
                             buffer.append("Medicamentos: "+res.getString( 15)+"\n");
-
-
-
-
                         }
                         showMessage("Data", buffer.toString());
                     }

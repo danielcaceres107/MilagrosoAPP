@@ -1,86 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/colorAccent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="160sp"
-            app:srcCompat="@drawable/alas" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/colorAccent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/hipertension1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10px"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
-        >
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="160sp"
+                app:srcCompat="@drawable/alas" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/hipertension2"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hipertension1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/black"
+            >
+
+            <EditText
+                android:id="@+id/hipertension2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Ingrese presion arterial"
+                android:inputType="text"
+                android:selectAllOnFocus="false"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/medicamentos1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="Ingrese presion arterial"
-            android:inputType="text"
-            android:selectAllOnFocus="false"
-            android:textSize="12sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/black"
+            >
+            <EditText
+                android:id="@+id/medicamentos2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10px"
+                android:hint="Ingrese medicamentos"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="12sp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/medicamentos1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/black"
-        >
-        <EditText
-            android:id="@+id/medicamentos2"
+        <Button
+            android:id="@+id/button_registrar_signos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10px"
-            android:hint="Ingrese medicamentos"
-            android:ems="10"
-            android:inputType="text"
-            android:textSize="12sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_rounded"
+            android:text="Registrar"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:onClick="button_registrar_signos"
             />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button_registrar_signos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/button_rounded"
-        android:text="Registrar"
-        android:textSize="11sp"
-        android:textColor="#FFFFFF"
-        android:onClick="button_registrar_signos"
-        />
+            <Button
+                android:id="@+id/btn_ver_mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_rounded"
+                android:onClick="buttonVerMapa"
+                android:text="Ver Mapa"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
 
-</LinearLayout>
+            <ImageButton
+                android:id="@+id/emergency_button"
+                android:layout_width="110dp"
+                android:layout_height="89dp"
+                android:layout_marginLeft="155dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/llamada_de_emergencia"
+                android:textSize="11sp" />
+        </LinearLayout>
+</ScrollView>

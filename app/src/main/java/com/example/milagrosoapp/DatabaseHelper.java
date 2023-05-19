@@ -44,9 +44,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1){
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(db);
-
     }
-    public void initData(){
+    public void initData() {
         SQLiteDatabase db= this.getWritableDatabase();
         onUpgrade(db,1,1);
     }
