@@ -1,20 +1,15 @@
 package com.example.milagrosoapp;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
 
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.PlaceDetectionClient;
-import com.google.android.gms.location.places.PlaceLikelihood;
-import com.google.android.gms.location.places.PlaceLikelihoodBufferResponse;
-import com.google.android.gms.location.places.Places;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -22,19 +17,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.milagrosoapp.databinding.ActivityUbicacionBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-/*
-import com.google.android.gms.place.api.Places;
-import com.google.android.gms.places.api.model.Place;
-import com.google.android.gms.places.api.net.FindPlaceRequest;
-import com.google.android.gms.places.api.net.FindPlaceResponse;
-import com.google.android.gms.places.api.net.PlacesClient;
-
- */
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
 
@@ -43,12 +25,16 @@ public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
 
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
 
+    private FusedLocationProviderClient fusedLocationClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityUbicacionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -87,5 +73,25 @@ public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
         mMap.addMarker(new MarkerOptions().position(colombia).title("Ubicación actual"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(colombia));
 
+    }
+
+    public void mostrarUbicacion(View view) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_CODE_LOCATION_PERMISSION);
+            return;
+        }
+
+        fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
+            if (location != null) {
+                double latitud = location.getLatitude();
+                double longitud = location.getLongitude();
+
+                Intent intent = new Intent(Ubicacion.this, Emergency.class);
+                intent.putExtra("latitud", latitud);
+                intent.putExtra("longitud", longitud);
+                startActivity(intent);
+            }
+        });
     }
 }
