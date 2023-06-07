@@ -171,15 +171,5 @@
             android:textColor="#FFFFFF"
             android:textSize="11sp" />
 
-        <ImageButton
-            android:id="@+id/emergency_button"
-            android:layout_width="110dp"
-            android:layout_height="89dp"
-            android:layout_marginLeft="155dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/llamada_de_emergencia"
-            android:textSize="11sp" />
     </LinearLayout>
 </ScrollView>

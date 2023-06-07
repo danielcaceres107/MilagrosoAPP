@@ -62,8 +62,14 @@ public class Login_form extends AppCompatActivity {
                             startActivity(intent);
                             validación = validación++;
                             break;
-                        } else {
+                        } else if (tipo.equals("Insuficiencia Cardiaca")){
                             Intent intent = new Intent(Login_form.this, signosInsuficiencia.class);
+                            intent.putExtra("idUser", id);
+                            startActivity(intent);
+                            validación = validación++;
+                            break;
+                        } else {
+                            Intent intent = new Intent(Login_form.this, Emergency.class);
                             intent.putExtra("idUser", id);
                             startActivity(intent);
                             validación = validación++;

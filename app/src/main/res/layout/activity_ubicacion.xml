@@ -13,12 +13,21 @@
         tools:context=".Ubicacion" />
 
     <Button
-        android:id="@+id/btnUbicacion"
+        android:id="@+id/btnEmergencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:text="Emergencia"
-        android:onClick="mostrarUbicacion" />
+        android:onClick="botonEmergencia" />
+
+    <Button
+        android:id="@+id/btnDibujarRuta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:text="Mostrar Ruta"
+        />
 
 </FrameLayout>

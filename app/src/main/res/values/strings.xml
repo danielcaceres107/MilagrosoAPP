@@ -7,6 +7,8 @@
         <item>Hipertension</item>
         <item>Diabetes</item>
         <item>Insuficiencia cardiaca</item>
+        <item>Medico</item>
     </string-array>
     <string name="title_activity_ubicacion">Ubicacion</string>
+    <string name="google_maps_api_key">MAPS_API_KEY</string>
 </resources>
